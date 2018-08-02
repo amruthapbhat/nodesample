@@ -9,56 +9,56 @@ resource "aws_security_group" "blockchain" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
    ingress {
     from_port   = 7050
     to_port     = 7050
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
    ingress {
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
    ingress {
     from_port   = 4000
     to_port     = 4000
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
    ingress {
     from_port   = 7054
     to_port     = 7054
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
    ingress {
     from_port   = 7051
     to_port     = 7051
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
-   ingress {
+
+  ingress {
     from_port   = 7053
     to_port     = 7053
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
    ingress {
     from_port   = 7056
     to_port     = 7056
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
    ingress {
     from_port   = 7058
     to_port     = 7058

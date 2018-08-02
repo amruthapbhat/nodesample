@@ -7,23 +7,10 @@ provider "aws" {
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
 
-resource "aws_key_pair" "blockchainkey" {
-  key_name   = "${var.client}-key"
-  public_key = "${file("./ssh_key/###SSH_KEY_NAME###.pub")}"
-}
-
-variable "private_key" {
-  default = "./ssh_key/###SSH_KEY_NAME###"
-}
-
-variable "pub_key" {
-  default = "./ssh_key/###SSH_KEY_NAME###.pub"
-}
-
 variable "client" {
   description = "Name of the client"
   #TO DO: Find a way to update this based on Client Name
-  default = "###CLIENT###"
+  default = "BC"
 }
 
 variable "env" {
@@ -34,15 +21,15 @@ variable "vpc" {
   description = "VPC Vars"
 
   default = {
-    cidr_block = "###IP_RANGE###.0.0/16"
-    cidr_half  = "###IP_RANGE###"
+    cidr_block = "10.6.0.0/16"
+    cidr_half  = "10.6"
   }
 }
 
 variable "region" {
   type        = "string"
   description = "AWS Region"
-  default     = "###AWS_LOCATION###"
+  default     = "ap-south-1"
 }
 
 variable "availability_zone" {
@@ -62,4 +49,6 @@ variable "organization" {
   }
 }
 
+variable "ami" {
+  default = "ami-c6cff2a9"
 }
