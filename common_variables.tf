@@ -52,10 +52,4 @@ variable "organization" {
   }
 }
 
-variable "ami" {
-  default = "ami-c6cff2a9"
-}
 
-variable "count" {
-  default = "3"
-}
