@@ -1,11 +1,14 @@
 provider "aws" {
-  region = "ap-south-1"
+  region = "${var.region}"
   access_key = "${var.aws_access_key}"
   secret_key = "${var.aws_secret_key}"
 }
 
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
+variable "count" {}
+variable "ami" {}
+variable "region" {}
 
 variable "client" {
   description = "Name of the client"
@@ -51,4 +54,8 @@ variable "organization" {
 
 variable "ami" {
   default = "ami-c6cff2a9"
+}
+
+variable "count" {
+  default = "3"
 }

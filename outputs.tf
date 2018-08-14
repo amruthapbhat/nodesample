@@ -10,7 +10,4 @@ output "org_ip" {
   value = "${aws_instance.org.*.public_ip}"
 }
 
-output "orderer_ip" {
-  value = "${aws_instance.orderer.public_ip}"
-}
 
